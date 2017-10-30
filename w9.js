@@ -47,4 +47,4 @@ var getAndWriteData = function() {
 
 // write a new row of sensor data every 10 minutes
 // depending on the results the interval might need to be updated.
-setInterval(getAndWriteData, 6000);
+setInterval(getAndWriteData, 600000);
