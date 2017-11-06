@@ -19,7 +19,7 @@ app.get('/', function(req, res) {
              EXTRACT(MONTH FROM time AT TIME ZONE 'America/New_York') as month,
              count(*) as num_obs, 
              avg(potentiometer) as avg_potentiometer, 
-             sum(case when piezo = true then 1 else 0 end) as triggered
+             sum(case when piezo = true then 1 else 0 end) as triggered,
              sum(case when piezo = false then 1 else 0 end) as not_triggered
              FROM sensors
              GROUP BY month, day;`;
